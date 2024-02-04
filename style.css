@@ -1,0 +1,65 @@
+/* 
+    Graduate Atelier - Assignment 1
+    This CSS file sets up the styles for the webpage.
+*/
+
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #D2EDF5;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+  
+h1 {
+    margin-bottom: 30px;
+    font-size: 34px;
+}
+
+picture {
+    max-width: 100%;
+}
+
+#main {
+    width: 1000px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#response {
+    width: 1000px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* This overlay code was not used at the end since it led to issues of visibility */
+.overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+    opacity: 0.1;
+    z-index: 1; /* Ensure the overlay is on top of the image */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    width: 1000px;
+    text-align: center;
+    padding: 20px 0;
+    transform: translate(-50%, -50%);
+    color: white; /* Set the text color */
+    opacity: 1.0;
+    background-color: #000000;
+    font-size: 24px;
+    z-index: 1; /* Ensure the overlay is on top of the image */
+}

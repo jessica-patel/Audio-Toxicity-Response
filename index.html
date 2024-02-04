@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<!--
+    Graduate Atelier - Assignment 1
+    This HTML file sets up the web page for this assignment.
+    The code was written with reference to the TensorFlow Toxicity model demo code on GitHub.
+-->
+
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- TensorFlow Language Toxicity Model -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/toxicity"></script>
+    </head>
+    <body>
+        <!-- Introductory Text -->
+        <div id="main">
+            <h1>Verbal Toxicity Response for Online Games</h1>
+            <p>Graduate Atelier Assignment 1 - Individual Thematic/Topic Explorations</p>
+            <p>By Jessica Patel</p>
+            <p>This is a prototype for a potential system that could be implemented in online games for the purpose of reducing in-game 
+                verbal harassment. It transcribes audio, and determines whether it is harmful according to the following criteria:
+                identity attack, insult, obscene, severe toxicity, sexually explicit, threat, toxicity. This is done through the Text Toxicity
+                Detection model by TensorFlow. If toxic language is detected, warnings appear on the screen as shown below.
+            </p>
+        </div>
+        <!-- Wireframe & Response -->
+        <div id="response">
+            <!-- Game Wireframe -->
+            <div id="backgroundOverlay">
+                <picture>
+                    <source srcset="game_wireframe.png" media="(max-width:767px)">
+                    <img src="game_wireframe.png" alt="Game wireframe">
+                </picture>
+            </div>
+            <!-- Text Overlay -->
+            <div class="text-overlay" id="textOverlay">Please refrain from using harmful language. Keep a friendly environment.</div>
+            <!-- Toxicity Categories Indicator (JavaScript adds labels)-->
+            <div> Harm: <div style="display: inline;" id="labels"></div>
+            </div>
+        </div>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+    </body>
+</html>
